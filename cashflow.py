@@ -115,7 +115,7 @@ results = service.spreadsheets().values().batchUpdate(spreadsheetId = spreadshee
             ]
 }).execute()
 
-# Выгрузка обработанной таблицы transactions в Google Sheets для формирования pivot_table (transactions_for_pivot):
+# Выгрузка обработанной таблицы transactions в Google Sheets для формирования pivot_table(transactions_for_pivot):
 transactions_df_out = transactions.reset_index()
 transactions_df_out = transactions_df_out.fillna(0)
 transactions_df_out[['date','month']] = transactions_df_out[['date','month']].astype('str')
